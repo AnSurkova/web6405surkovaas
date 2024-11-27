@@ -1,6 +1,5 @@
 const assert = require('assert');
-const core = require('./core'); // Убедитесь, что файл core.js находится в той же директории
-
+const core = require('./core'); 
 describe('Задания core js', () => {
     describe('#isInteger', () => {
         it('Возвращает true на целое число', () => {
