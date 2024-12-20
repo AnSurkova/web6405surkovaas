@@ -103,51 +103,79 @@ class Obj {
         this.key = key;
     }
 }
+
 5. Поиск элементов в DOM
+
 Основные методы:
--document.getElementById('id')
--document.querySelector('.class')
--document.querySelectorAll('div')
--document.getElementsByClassName('class')
+- document.getElementById('id')
+- document.querySelector('.class')
+- document.querySelectorAll('div')
+- document.getElementsByClassName('class')
+
 Используются для взаимодействия с элементами страницы.
+
 6. События в JavaScript
--Привязка событий:
+
+- Привязка событий:
 javascript
+
 element.addEventListener('click', () => {
     console.log('Clicked!');
 });
+
 Примеры событий: click, submit, input, mouseover.
+
 Объект события: Доступен через параметр функции.
+
 7. Работа с формами
--Обработка отправки:
+
+- Обработка отправки:
+
 javascript
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     console.log('Form submitted');
 });
+
 Проверка полей:
+
 javascript
+
 if (input.value === '') {
     console.log('Field is empty');
 }
+
 Сбор данных:
+
 javascript
+
 const formData = new FormData(form);
+
 8. Асинхронное взаимодействие: Promise, Async/Await, Fetch
+
 Promise:
+
 javascript
+
 fetch(url)
     .then(response => response.json())
     .then(data => console.log(data));
+    
 Async/Await:
+
 javascript
+
 async function fetchData() {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
 }
+
 Fetch: Лёгкий способ отправлять запросы.
+
 javascript
+
 fetch('https://api.example.com/data')
     .then(response => response.json())
     .catch(error => console.error(error));
